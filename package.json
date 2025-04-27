@@ -1,0 +1,23 @@
+{
+    "name": "dev-database",
+    "version": "1.0.0",
+    "description": "Express + SQLite API for the Developers Database demo",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "dev": "nodemon server/server.js"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.19.2",
+      "sqlite3": "^5.1.6"
+    },
+    "devDependencies": {
+      "nodemon": "^3.0.2"
+    },
+    "engines": {
+      "node": ">=16"
+    },
+    "license": "MIT"
+  }
+  
