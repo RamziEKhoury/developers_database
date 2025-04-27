@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Building Search Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Developers Database <span class="wave">👋</span></h1>
+    </header>
+
+    <!-- Search card -->
+    <section class="card search-card">
+      <div class="search-type">
+        <label><input type="radio" name="searchType" value="developer"            checked> Developer</label>
+        <label><input type="radio" name="searchType" value="areaName">            Area</label>
+        <label><input type="radio" name="searchType" value="masterProjectName">   Master Project</label>
+        <label><input type="radio" name="searchType" value="projectName">         Building</label>
+        <label><input type="radio" name="searchType" value="managementCompanyName"> Management</label>
+        </div>
+      <div class="search-controls">
+        <select id="developerSelect" class="search-select hidden">
+          <option value="">-- Any Developer --</option>
+        </select>
+        <select id="areaNameSelect" class="search-select hidden">
+          <option value="">-- Any Area --</option>
+        </select>
+        <select id="masterProjectNameSelect" class="search-select hidden">
+          <option value="">-- Any Master Project --</option>
+        </select> 
+        
+        <select id="projectNameSelect" class="search-select hidden">
+          <option value="">-- Any Building --</option>
+        </select>
+        <select id="managementCompanyNameSelect" class="search-select hidden">
+          <option value="">-- Any Management Company --</option>
+        </select>
+        <button id="searchBtn" class="btn">Search</button>
+      </div>
+    </section>
+
+    <!-- Advanced filters (hidden until Search) -->
+    <section id="advancedFilters" class="card advanced-filters hidden">
+      <div class="filter-group">
+        <label for="floorsFilter"># Floors</label>
+        <select id="floorsFilter">
+          <option value="">Any</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="registeredFilter">Registered</label>
+        <select id="registeredFilter">
+          <option value="">Any</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+
+      </div>
+    </section>
+
+        <!-- row counter -->
+        <section id="rowCounter" class="card row-counter hidden">
+          <span class="count" id="rowCount"> row-counter </span>
+        </section>
+
+    <!-- Results table (hidden until Search) -->
+    <section id="resultsSection" class="card table-card hidden">
+      <table id="resultsTable">
+
+        <thead>
+          <tr>
+            <th data-key="areaName">Location</th>
+            <th data-key="masterProjectName">Master Project</th>
+            <th data-key="projectName">Project</th>
+            <th data-key="numberOfFloors">Floors</th>
+            <th data-key="numberOfFlats">Flats</th>
+            <th data-key="isRegistered">Registered</th>
+            <th data-key="creationDate">Created</th>
+            <th data-key="Developer">Developer</th>
+            <th data-key="managementCompanyName">Management Company</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
