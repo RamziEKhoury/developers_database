@@ -1,7 +1,7 @@
 {
-    "name": "dev-database",
+    "name": "developers-database-api",
     "version": "1.0.0",
-    "description": "Express + SQLite API for the Developers Database demo",
+    "description": "Express + SQLite API that powers the Developers Database front-end",
     "main": "server/server.js",
     "scripts": {
       "start": "node server/server.js",
